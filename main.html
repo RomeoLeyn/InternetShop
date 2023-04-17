@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIFI Zone</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Стилі навігаційного меню -->
+    <link rel="stylesheet" href="css/navMenuStyle.css">
+
+</head>
+
+<body>
+
+    <!-- NAV MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">WIFI-ZONE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Фільтр
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Від дорогих</a></li>
+                            <li><a class="dropdown-item" href="#">Від дешевих</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
+                    <button class="btn btn-outline-success me-2" type="submit">Пошук</button>
+                    <ul class="navbar-nav">
+                        <li class="me-2">
+
+                            <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal-cart" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Корзина</h5>
+                                            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col"></th>
+                                                        <th>Виробник/Модель</th>
+                                                        <th scope="col">Тип (Wi Мережева карта GbE)</th>
+                                                        <th scope="col">Максимальна швидкість з'єднання, Мбіт/с</th>
+                                                        <th scope="col">Розміри, мм</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td><img src="images/router2.jpg" alt=""></td>
+                                                        <td>Xiaomi</td>
+                                                        <td>WIFI</td>
+                                                        <td>600 Мбіт/с</td>
+                                                        <td>150x100mm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td><img src="images/router2.jpg" alt=""></td>
+                                                        <td>Xiaomi</td>
+                                                        <td>WIFI</td>
+                                                        <td>600 Мбіт/с</td>
+                                                        <td>150x100mm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td><img src="images/router2.jpg" alt=""></td>
+                                                        <td>Xiaomi</td>
+                                                        <td>WIFI</td>
+                                                        <td>600 Мбіт/с</td>
+                                                        <td>150x100mm</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-success btn-second"
+                                                data-bs-dismiss="modal">Повернутися до покупок</button>
+                                            <button type="button" class="btn btn-outline-success btn-first">Оформити
+                                                замовлення</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Старий варіант кнопки логіну -->
+
+                        <!-- <li class="me-2">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-login">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                        </li>
+
+                        <div class="modal fade" id="modal-login" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Логін</h5>
+                                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                       <p>Лоігн</p>
+                                       <input type="text">
+                                       <p>Пароль</p>
+                                       <input type="text">
+                                       <p>Запам'ятати</p>
+                                       <input type="checkbox">
+                                    </div> -->
+                        <!-- Старий варіант кнопки логіну -->
+
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modal-login">Вхід</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modal-sigIn">Реєстрація</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Модальне вікно входу -->
+
+                        <div class="modal fade" id="modal-login" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Логін</h5>
+                                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Лоігн</p>
+                                        <input type="text" placeholder="Введіть логін">
+                                        <p>Пароль</p>
+                                        <input type="text" placeholder="Введіть пароль">
+                                        <p>Запам'ятати</p>
+                                        <input type="checkbox"> <br>
+
+                                        <button>Вхід</button>
+                                        <button class="">Скасувати</button>
+                                    </div>
+                    </ul>
+                </form>
+
+                <!-- Модальне вікно реєстрації -->
+
+                <!-- <div class="modal fade" id="modal-sigIn" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Реєстрація</h5>
+                                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Лоігн</p>
+                                <input type="text">
+                                <p>Пароль</p>
+                                <input type="password">
+                                <p>Пароль</p>
+                                <input type="password">
+                            </div>
+
+                        </div>
+                    </div> -->
+    </nav>
+    <!-- NAV MENU -->
+
+    <!-- Модальне вікно реєстрації -->
+
+    <div class="modal fade" id="modal-sigIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Реєстрація</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Лоігн</p>
+                    <input type="text" placeholder="Введіть логін">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="Введіть пароль">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="Введіть пароль ще раз">
+
+                    <button class="">Реєстрація</button>
+                    <button class="">Скасувати</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <!-- bootstrap js -->
+
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/b245f7814b.js" crossorigin="anonymous"></script>
+        <!-- Font awesome -->
+</body>
+
+</html>
