@@ -6,8 +6,8 @@ body {
     font-family: $myFontMonserat;
     font-size: $myFontSize;
 }
-// Тіло
 
+// Тіло
 
 // Модальне вікно корзини
 .modal .modal-footer {
@@ -21,6 +21,16 @@ body {
 .modal .modal-title {
     color: white;
 }
-// Модальне вікно
+// Модальне вікно корзини  
+
 
 // Випадаючий список кнопки реєстрації
+.navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+// стилі для кнопки добавити (тільки для адміна)
+.add-button {
+    visibility: hidden;
+}

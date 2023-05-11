@@ -14,3 +14,12 @@ body {
 .modal .modal-title {
   color: white;
 }
+
+.navbar-nav .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.add-button {
+  visibility: hidden;
+}
