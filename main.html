@@ -28,6 +28,15 @@
     <!-- Стилі футераа сайту -->
     <link rel="stylesheet" href="css/footer.css">
 
+    <!-- FavIcon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
@@ -130,8 +139,9 @@
                                 <i class="fa-regular fa-user"></i>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="loginForm.html">Вхід</a></li>
-                                <li><a class="dropdown-item" href="registerForm.html">Реєстрація</a></li>
+                                <li><a class="dropdown-item" id="buttonLoginReg" href="loginForm.html">Вхід</a></li>
+                                <li><a class="dropdown-item" id="buttonLoginReg" href="registerForm.html">Реєстрація</a></li>
+                                <li><a class="dropdown-item exit-button" id="button-exit" href="">Вихід</a></li>
                             </ul>
                         </div>
                     </ul>
@@ -428,7 +438,7 @@
                 <div class="col-md-3 col-sm-6">
                     <h4>Контактні дані</h4>
                     <ul>
-                        <li>Email: routershop@gmail.com</li>
+                        <li><a href="mailto:routershop@gmail.com">Email: routershop@gmail.com</a></li>
                         <li>Номер телефону: +38097000000</li>
                     </ul>
                 </div>
@@ -445,7 +455,10 @@
                 <div class="col-md-3 col-sm-6">
                     <h4>Час роботи</h4>
                     <ul>
-                        <li>м.Тернопіль вул.Л.Курбаса</li>
+                        <li> <a href="https://www.google.com/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9B%D0%B5%D1%81%D1%8F+%D0%9A%D1%83%D1%80%D0%B1%D0%B0%D1%81%D0%B0,+%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C,+%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+46003/@49.5756051,25.6414887,17z/data=!3m1!4b1!4m6!3m5!1s0x47303162c7f79fa7:0x1d6ecd9d2d13c3d2!8m2!3d49.5756051!4d25.6414887!16s%2Fg%2F1tk8mc1h"
+                                target="_blank">
+                                м.Тернопіль вул.Л.Курбаса</a>
+                        </li>
                         <li>пн-пт: 8:00 - 20:00</li>
                         <li>сб-нд: 10:00 - 16:00</li>
                     </ul>
