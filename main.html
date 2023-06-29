@@ -53,9 +53,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <button class="add-button">Добавити</button>
+                        <button id="add-button" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-info">Добавити</button>
                     </li>
                 </ul>
+                
 
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
@@ -77,8 +79,8 @@
                                             <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <table class="table">
+                                        <div class="modal-body-cart">
+                                            <!-- <table class="table">
 
                                                 <thead>
                                                     <tr>
@@ -109,18 +111,8 @@
                                                         <td>600 Мбіт/с</td>
                                                         <td>150x100mm</td>
                                                     </tr>
-
-                                                    <tr>
-                                                        <th scope="row"><input type="checkbox">3</th>
-                                                        <td><img src="images/router2.jpg" alt=""></td>
-                                                        <td>Xiaomi</td>
-                                                        <td>WIFI</td>
-                                                        <td>600 Мбіт/с</td>
-                                                        <td>150x100mm</td>
-                                                    </tr>
-
                                                 </tbody>
-                                            </table>
+                                            </table> -->
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-success btn-second"
@@ -139,9 +131,14 @@
                                 <i class="fa-regular fa-user"></i>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" id="buttonLoginReg" href="loginForm.html">Вхід</a></li>
-                                <li><a class="dropdown-item" id="buttonLoginReg" href="registerForm.html">Реєстрація</a></li>
-                                <li><a class="dropdown-item exit-button" id="button-exit" href="">Вихід</a></li>
+                                <li class="list-login-button"><a class="dropdown-item buttonLogIn"
+                                        href="loginForm.html">Вхід</a></li>
+                                <li class="list-login-button"><a class="dropdown-item buttonReg"
+                                        href="registerForm.html">Реєстрація</a>
+                                </li>
+                                <li><button class="dropdown-item exit-button" id="button-exit"
+                                        onclick="clearLocaleStorageForLogIn()">Вихід</button>
+                                </li>
                             </ul>
                         </div>
                     </ul>
@@ -155,77 +152,12 @@
 
     <section class="options">
         <div class="container">
-
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="category-filter">
-                        <ul class="category-filter-items">
-                            <li><input type="checkbox">Звичайні</li>
-                            <li><input type="checkbox">Mesh-системи</li>
-                            <li><input type="checkbox">Ігровий</li>
-                        </ul>
-                    </div>
+            <form method="POST" class="form-filter">
+                <input type="search" id="search-for-card" placeholder="Пошук моделі">
+                <div class="search-btn d-grid gap-2">
+                    <button class="btn btn-dark seacrh-button-card" type="submit">Пошук</button>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="category-filter">
-                        <ul class="category-filter-items">
-                            <li><input type="checkbox">WEB-interface</li>
-                            <li><input type="checkbox">LAN-кабель</li>
-                            <li><input type="checkbox">Ігровий</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="category-filter">
-                        <ul class="category-filter-items">
-                            <!-- <li>
-                                <select class="drop-down-list">
-                                    <option value="">Від дешевих</option>
-                                    <option value="">Від дорогих</option>
-                                </select>
-                            </li> -->
-                            <li><input type="checkbox">Від дешевих</li>
-                            <li><input type="checkbox">Від дорогих</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- <div class="category-filter">
-                <ul class="category-filter-items">
-                    <li><input type="checkbox">Звичайні</li>
-                    <li><input type="checkbox">Mesh-системи</li>
-                    <li><input type="checkbox">Ігровий</li>
-                </ul>
-            </div> -->
-
-        <!-- <div class="price-filter">
-                <ul class="price-filter-items">
-                    <li>
-                        <select class="drop-down-list">
-                            <option value="">Від дешевих</option>
-                            <option value="">Від дорогих</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="conect-filter">
-                <ul class="conect-filter-item">
-                    <li><input type="checkbox">WEB-interface</li>
-                    <li><input type="checkbox">LAN-кабель</li>
-                    <li><input type="checkbox">Ігровий</li>
-                </ul>
-            </div> -->
-
-
-        <div class="search-btn d-grid gap-2">
-            <button class="btn btn-dark" type="button">Пошук</button>
+            </form>
         </div>
 
     </section>
@@ -237,38 +169,9 @@
     <!-- Головний контент -->
     <section class="main-content">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/pinkRouter.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
+            <div class="row" id="product-container">
 
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small><span class="product-event-price">99.9$</span>
-                                </div>
-                                <!-- Видима тільки для адміністратора -->
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
+                <!-- <div class="col-lg-4 col-sm-6">
                     <div class="product-card">
                         <div class="product-img">
                             <a href="#"><img src="images/router2.jpg" alt="router"></a>
@@ -288,145 +191,30 @@
                                     <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
                                 </div>
 
-                                <!-- Видима тільки для адміністратора -->
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/router2.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
-
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
-                                </div>
-
-                                <!-- Видима тільки для адміністратора -->
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/router2.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
-
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
-                                </div>
-
-                                <!-- Видима тільки для адміністратора -->
+                                Видима тільки для адміністратора
                                 <div class="edit-button"><button>Редагувати</button></div>
 
 
                                 <div class="product-links">
                                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <button><i class="fa-solid fa-dumpster"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/router2.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
-
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
-                                </div>
-
-                                <!-- Видима тільки для адміністратора -->
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/router2.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
-
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
-                                </div>
-
-                                <!-- Видима тільки для адміністратора -->
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
 
 
             </div>
+
+
+
+        </div>
+        <div id="pagination-container">
+            <!-- <button onclick="getCard(1, 6)">1</button>
+            <button onclick="getCard(2, 6)">2</button>
+            <button onclick="getCard(3, 6)">3</button> -->
+        </div>
+        <!-- <button>Load More</button> -->
         </div>
     </section>
 
@@ -478,6 +266,38 @@
     </footer>
 
 
+    <!-- Модальне вікно додавння кароточки товару -->
+    <div class="modal" id="modal-add-info" tabindex="-1">
+        <div class="modal-dialog">
+            <form method="post" class="modal-content" id="modal-body-info">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="file">
+                        <input id="product-name" placeholder="Заголовок" type="text">
+                        <input id="product-model" placeholder="Модель" type="text">
+                        <input id="product-connect" placeholder="Тип підключення" type="text">
+                        <input id="product-interface" placeholder="Інтерфейс" type="text">
+                        <input id="product-speed" placeholder="Максимальна швидкість" type="text">
+                        <input id="product-size" placeholder="Розміри" type="text">
+                        <input id="product-price" placeholder="Ціна" type="text">
+                        <!-- Реалізувати випадаючий список або введення з клавіатури знижку на товар -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                    <button type="submit" class="btn btn-primary">Добавити</button>
+                </div>
+                <!-- <button type="submit" class="btn btn-primary">Добавити</button> -->
+            </form>
+        </div>
+    </div>
+    <!-- Модальне вікно додавння інформації -->
+
+
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -487,6 +307,54 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/b245f7814b.js" crossorigin="anonymous"></script>
     <!-- Font awesome -->
+
+    <script src="js/product.js"></script>
+    <!-- <script src="js/addToCart.js"></script> -->
+    <script src="js/log_in.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script src="js/pagination.js"></script>
+    <script src="js/sort.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentUser = localStorage.getItem('currentUser');
+            // const deleteButton = document.querySelector('.delete-card-button');
+
+            if (currentUser) {
+                const parsedCurrentUser = JSON.parse(currentUser);
+
+                if (parsedCurrentUser.isAdmin) {
+                    // Користувач є адміністратором, показуємо потрібні кнопки
+                    const addButton = document.getElementById('add-button');
+                    const exitButton = document.getElementById('button-exit');
+                    const buttonLogInReg = document.querySelector('.buttonLogIn');
+                    const buttonLogReg = document.querySelector('.buttonReg');
+
+                    addButton.style.display = 'block';
+
+                    exitButton.style.display = 'block';
+                    buttonLogInReg.style.display = 'none';
+                    buttonLogReg.style.display = 'none';
+
+                    // const deleteButton = document.querySelector('.delete-card-button');
+                    // deleteButton.style.display = 'block';
+
+                } else {
+                    // Користувач не є адміністратором, приховуємо кнопки
+                    const addButton = document.getElementById('add-button');
+                    const exitButton = document.getElementById('button-exit');
+                    const buttonLogInReg = document.querySelector('.buttonLogIn');
+                    const buttonLogReg = document.querySelector('.buttonReg');
+                    addButton.style.display = 'none';
+                    exitButton.style.display = 'block';
+                    buttonLogInReg.style.display = 'none';
+                    buttonLogReg.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    <script src="js/deleteProduct.js"></script>
 </body>
 
 </html>

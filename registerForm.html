@@ -32,10 +32,10 @@
             <h4>Register</h4>
           </div>
           <div class="card-body">
-            <form>
+            <form method="post" id="userForm">
               <div class="form-group">
-                <label for="firstName">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Введіть ім'я">
+                <label for="firstName">login:</label>
+                <input type="text" class="form-control" id="login" placeholder="Введіть ім'я">
               </div>
               <!-- <div class="form-group">
                     <label for="lastName">Last name:</label>
@@ -49,20 +49,21 @@
                 <label for="password">Password:</label>
                 <input type="password" class="form-control" id="password" placeholder="Введіть пароль">
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="confirmPassword">Confirm password:</label>
                 <input type="password" class="form-control" id="confirmPassword" placeholder="Введіть пароль ще раз">
-              </div>
+              </div> -->
               <button type="submit" class="btn btn-dark btn-block mt-3">Готово</button>
             </form>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 
-  <script src="js/User.js"></script>
-  <script src="js/index.js" type="module"></script>
+  <!-- <script src="js/User.js"></script> -->
+  <script src="js/register.js"></script>
+  <script src="js/server.js"></script>
 </body>
 
 </html>
