@@ -57,7 +57,7 @@
                             data-bs-target="#modal-add-info">Добавити</button>
                     </li>
                 </ul>
-                
+
 
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
@@ -150,7 +150,7 @@
 
     <!-- Філтр -->
 
-    <section class="options">
+    <!-- <section class="options">
         <div class="container">
             <form method="POST" class="form-filter">
                 <input type="search" id="search-for-card" placeholder="Пошук моделі">
@@ -160,7 +160,19 @@
             </form>
         </div>
 
+    </section> -->
+
+    <section class="options">
+        <div class="container">
+            <form method="GET" class="form-filter" onsubmit="searchProducts(event)">
+                <input type="search" id="search-for-card" placeholder="Пошук моделі">
+                <div class="search-btn d-grid gap-2">
+                    <button class="btn btn-dark seacrh-button-card" type="submit">Пошук</button>
+                </div>
+            </form>
+        </div>
     </section>
+
 
 
 
