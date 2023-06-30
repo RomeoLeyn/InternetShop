@@ -245,22 +245,22 @@ server.listen(PORT, () => console.log(`server is up port: ${PORT}`));
 
 // Постійне підключення до сервера
 
-const startServer = () => {
-    if (!server.listening) {
-        server.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
-        });
-    }
-};
+// const startServer = () => {
+//     if (!server.listening) {
+//         server.listen(PORT, () => {
+//             console.log(`Server is running on port ${PORT}`);
+//         });
+//     }
+// };
 
-const stopServer = () => {
-    server.close(() => {
-        console.log('Server has been stopped');
-        process.exit(0);
-    });
-};
+// const stopServer = () => {
+//     server.close(() => {
+//         console.log('Server has been stopped');
+//         process.exit(0);
+//     });
+// };
 
-process.on('SIGINT', stopServer);
-process.on('SIGTERM', stopServer);
+// process.on('SIGINT', stopServer);
+// process.on('SIGTERM', stopServer);
 
-startServer();
+// startServer();
