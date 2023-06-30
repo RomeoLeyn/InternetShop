@@ -44,7 +44,7 @@
     <!-- NAV MENU -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="home">WIFI-ZONE</a>
+            <a class="navbar-brand" href="#" id="home">CONNECT-WORLD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -57,8 +57,6 @@
                             data-bs-target="#modal-add-info">Добавити</button>
                     </li>
                 </ul>
-
-
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
                     <button class="btn btn-outline-success me-2" type="submit">Пошук</button>
@@ -80,39 +78,7 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body-cart">
-                                            <!-- <table class="table">
 
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col"></th>
-                                                        <th>Виробник/Модель</th>
-                                                        <th scope="col">Тип (Wi Мережева карта GbE)</th>
-                                                        <th scope="col">Максимальна швидкість з'єднання, Мбіт/с</th>
-                                                        <th scope="col">Розміри, мм</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"><input type="checkbox">1</th>
-                                                        <td><img src="images/router2.jpg" alt=""></td>
-                                                        <td>Xiaomi</td>
-                                                        <td>WIFI</td>
-                                                        <td>600 Мбіт/с</td>
-                                                        <td>150x100mm</td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <th scope="row"><input type="checkbox">2</th>
-                                                        <td><img src="images/router2.jpg" alt=""></td>
-                                                        <td>Xiaomi</td>
-                                                        <td>WIFI</td>
-                                                        <td>600 Мбіт/с</td>
-                                                        <td>150x100mm</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table> -->
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-success btn-second"
@@ -149,33 +115,16 @@
     <!-- NAV MENU -->
 
     <!-- Філтр -->
-
-    <!-- <section class="options">
-        <div class="container">
-            <form method="POST" class="form-filter">
-                <input type="search" id="search-for-card" placeholder="Пошук моделі">
-                <div class="search-btn d-grid gap-2">
-                    <button class="btn btn-dark seacrh-button-card" type="submit">Пошук</button>
-                </div>
-            </form>
-        </div>
-
-    </section> -->
-
     <section class="options">
         <div class="container">
             <form method="GET" class="form-filter" onsubmit="searchProducts(event)">
-                <input type="search" id="search-for-card" placeholder="Пошук моделі">
                 <div class="search-btn d-grid gap-2">
+                    <input type="search" id="search-for-card" placeholder="Пошук моделі">
                     <button class="btn btn-dark seacrh-button-card" type="submit">Пошук</button>
                 </div>
             </form>
         </div>
     </section>
-
-
-
-
     <!-- Фільтр -->
 
     <!-- Головний контент -->
@@ -183,54 +132,14 @@
         <div class="container">
             <div class="row" id="product-container">
 
-                <!-- <div class="col-lg-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#"><img src="images/router2.jpg" alt="router"></a>
-                        </div>
-                        <div class="product-details">
-                            <a href="#">
-                                <h4>Xiaomi WIFI router</h4>
-                            </a>
-                            <p>Модель: Xiaomi</p>
-                            <p>Тип підключення: WIFI</p>
-                            <p>Інтерфейс підключення: LAN-кабель</p>
-                            <p>Максимальна швидкість: 300 Мбіт/с</p>
-                            <p>Розміри: 150x100</p>
-
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="prodcut-price">
-                                    <small><s>150$</s></small> <span class="product-event-price">99.9$</span>
-                                </div>
-
-                                Видима тільки для адміністратора
-                                <div class="edit-button"><button>Редагувати</button></div>
-
-
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <button><i class="fa-solid fa-dumpster"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-
             </div>
-
-
-
         </div>
         <div id="pagination-container">
-            <!-- <button onclick="getCard(1, 6)">1</button>
-            <button onclick="getCard(2, 6)">2</button>
-            <button onclick="getCard(3, 6)">3</button> -->
-        </div>
-        <!-- <button>Load More</button> -->
+
         </div>
     </section>
 
-
+    <!-- Футер -->
     <footer>
         <!-- <section class="footer"> -->
         <div class="container">
@@ -277,13 +186,12 @@
         <!-- </section> -->
     </footer>
 
-
     <!-- Модальне вікно додавння кароточки товару -->
     <div class="modal" id="modal-add-info" tabindex="-1">
         <div class="modal-dialog">
             <form method="post" class="modal-content" id="modal-body-info">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Панель додавання товару</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -296,19 +204,16 @@
                         <input id="product-speed" placeholder="Максимальна швидкість" type="text">
                         <input id="product-size" placeholder="Розміри" type="text">
                         <input id="product-price" placeholder="Ціна" type="text">
-                        <!-- Реалізувати випадаючий список або введення з клавіатури знижку на товар -->
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
-                    <button type="submit" class="btn btn-primary">Добавити</button>
+                    <button type="submit" class="btn btn-dark">Добавити</button>
                 </div>
-                <!-- <button type="submit" class="btn btn-primary">Добавити</button> -->
             </form>
         </div>
     </div>
     <!-- Модальне вікно додавння інформації -->
-
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -321,18 +226,12 @@
     <!-- Font awesome -->
 
     <script src="js/product.js"></script>
-    <!-- <script src="js/addToCart.js"></script> -->
     <script src="js/log_in.js"></script>
     <script src="js/main.js"></script>
-
-
     <script src="js/pagination.js"></script>
-    <script src="js/sort.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const currentUser = localStorage.getItem('currentUser');
-            // const deleteButton = document.querySelector('.delete-card-button');
-
             if (currentUser) {
                 const parsedCurrentUser = JSON.parse(currentUser);
 
@@ -349,9 +248,6 @@
                     buttonLogInReg.style.display = 'none';
                     buttonLogReg.style.display = 'none';
 
-                    // const deleteButton = document.querySelector('.delete-card-button');
-                    // deleteButton.style.display = 'block';
-
                 } else {
                     // Користувач не є адміністратором, приховуємо кнопки
                     const addButton = document.getElementById('add-button');
@@ -367,6 +263,7 @@
         });
     </script>
     <script src="js/deleteProduct.js"></script>
+    <script src="js/addToCart.js"></script>
 </body>
 
 </html>
