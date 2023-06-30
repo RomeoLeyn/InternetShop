@@ -165,7 +165,7 @@ document.querySelector('#modal-body-info').addEventListener('submit', function (
 
 async function getCard(page = 1, limit = 6, searchQuery = '') {
   try {
-    let url = `http://localhost:3000/js/products?page=${page}&limit=${limit}`;
+    let url = `http://localhost:3000/js/product?page=${page}&limit=${limit}`;
     if (searchQuery) {
       url += `&query=${searchQuery}`;
     }
